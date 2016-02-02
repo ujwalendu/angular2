@@ -26,21 +26,22 @@ export class AppComponent {
             throw new Error("Localstorage not found");
         }
 
+        this.selectedContact = new ContactDetail("parth", "parth@example_abc.com", "9876543210", true);
 
         this.contacts.push(
-            new ContactDetail("parth", "parth@example_abc.com", "9876543210")
+            this.selectedContact
         );
         this.contacts.push(
-            new ContactDetail("kumar", "kumar@example_abc.com", "9876543210")
+            new ContactDetail("kumar", "kumar@example_abc.com", "9876543210", false)
         );
         this.contacts.push(
-            new ContactDetail("mahajan", "mahajan@example_abc.com", "9876543210")
+            new ContactDetail("mahajan", "mahajan@example_abc.com", "9876543210", false)
         );
         this.contacts.push(
-            new ContactDetail("shanket", "shanket@example_abc.com", "9876543210")
+            new ContactDetail("shanket", "shanket@example_abc.com", "9876543210", false)
         );
         this.contacts.push(
-            new ContactDetail("swagat", "swagat@example_abc.com", "9876543210")
+            new ContactDetail("swagat", "swagat@example_abc.com", "9876543210", false)
         );
     }
 
