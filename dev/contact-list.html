@@ -1,0 +1,50 @@
+<div class="row">
+
+    <div class="col-md-3">
+
+        <div class="list-group">
+
+            <a class="list-group-item" href="javascript:void(0)" *ngFor="#contact of contacts" (click)="clicked(contact)">
+                <h4 class="list-group-item-heading">{{contact.name}}</h4>
+                <p class="list-group-item-text">{{contact.email}}</p>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-4" *ngIf="selectedContact">
+        <table class="table" role="form">
+            <tr>
+
+                <th style="padding-top:15px;">Name</th>
+                <td>
+                    <input  id="name"
+                    type="text"
+                    class="form-control"
+                    [(ngModel)]="selectedContact.name">
+                </td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>
+                    <input  id="email"
+                    type="text"
+                    class="form-control"
+                    [(ngModel)]="selectedContact.email">
+                </td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>
+                    <input  id="phone"
+                    type="number"
+                    class="form-control"
+                    [(ngModel)]="selectedContact.phone">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
